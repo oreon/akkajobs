@@ -38,7 +38,7 @@ class AuthEndpointSpec extends AsyncWordSpec
 
   override def afterAll {
     // Let's make sure our schema is dropped
-    flywayService.dropDatabase
+    //flywayService.dropDatabase
   }
 
   "A UserEndpoint" must {

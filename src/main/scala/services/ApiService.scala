@@ -21,6 +21,7 @@ class ApiService(
   val bookController = new BookController(bookRepository, tokenService)
   val authController = new AuthController(authRepository, tokenService)
   val userController = new UserController(userRepository, tokenService)
+  val jobController = new JobController(tokenService)
 
   val bookViewSearchController = new BookViewSearchController(categoryRepository, bookRepository)
 
@@ -33,7 +34,8 @@ class ApiService(
       categoryController.routes ~
       bookController.routes ~
       authController.routes ~
-      userController.routes
+      userController.routes ~
+      jobController.routes
     }
 
 }
